@@ -1,0 +1,32 @@
+{
+  "builds": [
+    {
+      "src": "packages/govuk-frontend-review/package.json",
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": ["dist/**"]
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/assets/(.*)",
+      "dest": "/packages/govuk-frontend-review/dist/assets/$1"
+    },
+    {
+      "src": "/javascripts/(.*)",
+      "dest": "/packages/govuk-frontend-review/dist/javascripts/$1"
+    },
+    {
+      "src": "/stylesheets/(.*)",
+      "dest": "/packages/govuk-frontend-review/dist/stylesheets/$1"
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/packages/govuk-frontend-review/src/start.mjs"
+    }
+  ]
+}

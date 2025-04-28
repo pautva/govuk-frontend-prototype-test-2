@@ -128,5 +128,24 @@
     "sassdoc-extras@^2": {
       "marked": "^0.8.2"
     }
+  },
+  "version": "1.0.0",
+  "main": ".eslintrc.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alphagov/govuk-frontend.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/alphagov/govuk-frontend/issues"
+  },
+  "homepage": "https://github.com/alphagov/govuk-frontend#readme",
+  "dependencies": {
+    "govuk-frontend": "^5.9.0",
+    "nunjucks": "^3.2.4",
+    "sass": "^1.87.0"
   }
 }
